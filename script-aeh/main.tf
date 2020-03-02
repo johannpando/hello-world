@@ -38,8 +38,8 @@ resource "azurerm_eventhub_namespace" "eventhubns" {
   kafka_enabled       = true
 
   tags = {
-    #cost_center     = data.azurerm_resource_group.rg.tags["cost_center"]
-    #product         = data.azurerm_resource_group.rg.tags["product"]
+    cost_center     = data.azurerm_resource_group.rg.tags["cost_center"]
+    product         = data.azurerm_resource_group.rg.tags["product"]
     channel         = var.channel
     description     = var.description
     tracking_code   = var.tracking_code

@@ -45,8 +45,8 @@ resource "azurerm_postgresql_server" "aps_server" {
   resource_group_name = var.resource_group
   tags = {     
     channel         = var.channel     
-    #cost_center     = data.azurerm_resource_group.rsg.tags["cost_center"]     
-    #product         = data.azurerm_resource_group.rsg.tags["product"]     
+    cost_center     = data.azurerm_resource_group.rsg.tags["cost_center"]     
+    product         = data.azurerm_resource_group.rsg.tags["product"]     
     description     = var.description     
     tracking_code   = var.tracking_code     
     cia             = var.cia   

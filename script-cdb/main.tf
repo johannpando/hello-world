@@ -51,8 +51,8 @@ resource "azurerm_cosmosdb_account" "main" {
   }
 
   tags = {
-    #cost_center     = data.azurerm_resource_group.wld_rg.tags["cost_center"]
-    #10product         = data.azurerm_resource_group.wld_rg.tags["product"]
+    cost_center     = data.azurerm_resource_group.wld_rg.tags["cost_center"]
+    product         = data.azurerm_resource_group.wld_rg.tags["product"]
     channel         = var.channel
     description     = var.description
     tracking_code   = var.tracking_code

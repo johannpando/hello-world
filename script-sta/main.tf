@@ -1,6 +1,9 @@
 data "azurerm_resource_group" "rsg" {
   name = var.resource_group
 }
+provider "azurerm" {
+  version = "~>1.44"
+}
 
 data "azurerm_subnet" "subnet" {
   name                 = var.subnet_name
@@ -34,7 +37,7 @@ resource "azurerm_storage_account" "storage_account_service" {
     bypass                     = ["Logging","Metrics","AzureServices"]
     ip_rules                   = [var.ip_rules]
   }
-/*
+
   tags = {
     cost_center         = data.azurerm_resource_group.rsg.tags["cost_center"]
     product             = data.azurerm_resource_group.rsg.tags["product"]
@@ -43,7 +46,7 @@ resource "azurerm_storage_account" "storage_account_service" {
     tracking_code       = var.tracking_code
     cia = var.cia
   }
-*/
+
 }
 
 data "azurerm_log_analytics_workspace" "law" {

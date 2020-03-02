@@ -17,8 +17,8 @@ resource "azurerm_log_analytics_workspace" "lwk" {
   sku                 = var.lwk_sku_name
 
   tags = {
-    #cost_center     = data.azurerm_resource_group.lwk_rg.tags["cost_center"]
-    #product         = data.azurerm_resource_group.lwk_rg.tags["product"]
+    cost_center     = data.azurerm_resource_group.lwk_rg.tags["cost_center"]
+    product         = data.azurerm_resource_group.lwk_rg.tags["product"]
     channel         = var.channel
     description     = var.description
     tracking_code   = var.tracking_code

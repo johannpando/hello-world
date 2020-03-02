@@ -19,8 +19,8 @@ resource "azurerm_application_insights" "main" {
   application_type    = var.application_type
 
   tags = {
-    #cost_center     = data.azurerm_resource_group.main.tags["cost_center"]
-    #product         = data.azurerm_resource_group.main.tags["product"]
+    cost_center     = data.azurerm_resource_group.main.tags["cost_center"]
+    product         = data.azurerm_resource_group.main.tags["product"]
     cia             = var.cia
     description     = var.description
     tracking_code   = var.tracking_code
