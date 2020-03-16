@@ -14,11 +14,11 @@ data "azurerm_log_analytics_workspace" "lwk" {
   depends_on          = [module.lwk_module]
 }
 
-data "azurerm_key_vault" "kvt" {
+/*data "azurerm_key_vault" "kvt" {
   name                = module.kvt_module.kvt_name
   resource_group_name = var.resource_group
   depends_on         = [module.kvt_module]
-}
+}*/
 
 data "azurerm_subnet" "subnet" {
   name                 = var.subnet_name
@@ -26,16 +26,16 @@ data "azurerm_subnet" "subnet" {
   resource_group_name  = var.vnet_resource_group_name
 }
 
-data "azurerm_storage_account" "sta" {
+/*data "azurerm_storage_account" "sta" {
   name                = module.sta_module.sta_name
   resource_group_name = module.sta_module.sta_resource_group_name
   depends_on          = [module.sta_module]
-}
-data "azurerm_eventhub_namespace" "aeh" {
+}*/
+/*data "azurerm_eventhub_namespace" "aeh" {
   name                = module.aeh_module.namespace_name
   resource_group_name = var.resource_group
   depends_on          = [module.aeh_module]
-}
+}*/
 
 #-----LWK Module-----
 
@@ -54,7 +54,7 @@ module "lwk_module" {
 
 #-----KVT Module-----
 
-module "kvt_module" {
+/*module "kvt_module" {
   source = "./script-kvt"
   
   name                         = "sdip1weukve${var.name}comm001"
@@ -70,11 +70,11 @@ module "kvt_module" {
   description                 = var.description
   tracking_code               = var.tracking_code
   cia                         = var.cia
-}
+}*/
 
 #-----STA Module-----
 
-module "sta_module" {
+/*module "sta_module" {
   source = "./script-sta"
 
   name                         = "sdip1weusta${var.name}comm001"
@@ -99,7 +99,7 @@ module "sta_module" {
   description                 = var.description
   tracking_code               = var.tracking_code
   cia                         = var.cia
-}
+}*/
 
 #-----APS Module-----
 
@@ -140,7 +140,7 @@ module "aps_module" {
 }
 
 #-----Cdb module-----
-module "cdb_module" {
+/*module "cdb_module" {
   source = "./script-cdb"
 
   name                         = "sdip1weucdb${var.name}comm001"
@@ -157,7 +157,7 @@ module "cdb_module" {
   description                  = var.description
   tracking_code                = var.tracking_code
   cia                          = var.cia  
-}
+}*/
 
 #-----Appins module-----
 module "appins_module" {
@@ -176,7 +176,7 @@ module "appins_module" {
 }
 
 #-----AEH module-----
-module "aeh_module" {
+/*module "aeh_module" {
   source = "./script-aeh"
 
   name                         = "sdip1weuaeh${var.name}comm001"
@@ -201,4 +201,4 @@ module "aeh_module" {
   description                    = var.description
   tracking_code                  = var.tracking_code
   cia                            = var.cia   
-}
+}*/
