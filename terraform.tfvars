@@ -10,7 +10,7 @@
   subnet_name               = "sdid1weusntglobal0glb006"  
 
   # tags 
-  channel                     = "testchannel"
-  description                 = "description"
-  tracking_code               = "code"
-  cia                         = "cia"
+  channel                     = "pro_m_channel"
+  description                 = "pro_m_description"
+  tracking_code               = "pro_m_tracking_code"
+  cia                         = "pro_m_cia"
