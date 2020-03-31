@@ -1,5 +1,5 @@
   #-----Basic parameters-----
-  name                          = "curasan"
+  name                          = "agro"
   resource_group                = "sdid1weursggensyscomm001"
   location                      = "westeurope"
 

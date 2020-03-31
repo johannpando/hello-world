@@ -3,7 +3,7 @@ terraform {
     resource_group_name  = "sdip1weursggensyscomm001"
     storage_account_name = "sdip1weustagensyscomm001"
     container_name       = "gen-tfstates"
-    key                  = "curasan.pre.terraform.tfstate"
+    key                  = "agro.pre.terraform.tfstate"
   }
 }
 
